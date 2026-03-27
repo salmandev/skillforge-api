@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { supabase } from '../config/supabase.js';
-import { CreatePromptKeywordInput, KeywordMatchResult } from '../types/index.js';
+import { supabase } from '../config/supabase';
+import { CreatePromptKeywordInput, KeywordMatchResult } from '../types/index';
 
 export const matchKeywords = async (req: Request, res: Response): Promise<void> => {
   try {

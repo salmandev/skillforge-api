@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import * as mcpServersController from '../controllers/mcpServersController.js';
-import { validate } from '../middleware/validate.js';
-import { createMCPServerSchema, updateMCPServerSchema, mcpServersQuerySchema } from '../schemas/index.js';
-import { validateQuery } from '../middleware/validate.js';
-import { rateLimiter } from '../middleware/rateLimit.js';
+import * as mcpServersController from '../controllers/mcpServersController';
+import { validate } from '../middleware/validate';
+import { createMCPServerSchema, updateMCPServerSchema, mcpServersQuerySchema } from '../schemas/index';
+import { validateQuery } from '../middleware/validate';
+import { rateLimiter } from '../middleware/rateLimit';
 
 const router = Router();
 

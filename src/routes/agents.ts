@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import * as agentsController from '../controllers/agentsController.js';
-import { validate } from '../middleware/validate.js';
-import { createAgentSchema, updateAgentSchema, agentsQuerySchema } from '../schemas/index.js';
-import { validateQuery } from '../middleware/validate.js';
-import { rateLimiter } from '../middleware/rateLimit.js';
+import * as agentsController from '../controllers/agentsController';
+import { validate } from '../middleware/validate';
+import { createAgentSchema, updateAgentSchema, agentsQuerySchema } from '../schemas/index';
+import { validateQuery } from '../middleware/validate';
+import { rateLimiter } from '../middleware/rateLimit';
 
 const router = Router();
 

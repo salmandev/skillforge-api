@@ -149,7 +149,7 @@ CREATE INDEX IF NOT EXISTS idx_skills_security_flags ON skills USING GIN(securit
 
 -- Full-text search index
 CREATE INDEX IF NOT EXISTS idx_skills_search_fts ON skills USING GIN(
-    to_tsvector('english', name || ' ' || description || ' ' || array_to_string(tags, ' '))
+    to_tsvector('english', coalesce(name, '') || ' ' || coalesce(description, ''))
 );
 
 -- Trigram index for fuzzy matching
@@ -170,7 +170,7 @@ CREATE INDEX IF NOT EXISTS idx_agents_compatible_frameworks ON agents USING GIN(
 
 -- Full-text search index
 CREATE INDEX IF NOT EXISTS idx_agents_search_fts ON agents USING GIN(
-    to_tsvector('english', name || ' ' || description || ' ' || array_to_string(tags, ' '))
+    to_tsvector('english', coalesce(name, '') || ' ' || coalesce(description, ''))
 );
 
 -- Trigram index for fuzzy matching
@@ -190,7 +190,7 @@ CREATE INDEX IF NOT EXISTS idx_workflows_steps ON workflows USING GIN(steps);
 
 -- Full-text search index
 CREATE INDEX IF NOT EXISTS idx_workflows_search_fts ON workflows USING GIN(
-    to_tsvector('english', name || ' ' || description || ' ' || array_to_string(tags, ' '))
+    to_tsvector('english', coalesce(name, '') || ' ' || coalesce(description, ''))
 );
 
 -- Trigram index for fuzzy matching
@@ -210,7 +210,7 @@ CREATE INDEX IF NOT EXISTS idx_mcp_servers_compatible_skill_ids ON mcp_servers U
 
 -- Full-text search index
 CREATE INDEX IF NOT EXISTS idx_mcp_servers_search_fts ON mcp_servers USING GIN(
-    to_tsvector('english', name || ' ' || description || ' ' || array_to_string(tags, ' '))
+    to_tsvector('english', coalesce(name, '') || ' ' || coalesce(description, ''))
 );
 
 -- Trigram index for fuzzy matching

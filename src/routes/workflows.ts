@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import * as workflowsController from '../controllers/workflowsController.js';
-import { validate } from '../middleware/validate.js';
-import { createWorkflowSchema, updateWorkflowSchema, workflowsQuerySchema } from '../schemas/index.js';
-import { validateQuery } from '../middleware/validate.js';
-import { rateLimiter } from '../middleware/rateLimit.js';
+import * as workflowsController from '../controllers/workflowsController';
+import { validate } from '../middleware/validate';
+import { createWorkflowSchema, updateWorkflowSchema, workflowsQuerySchema } from '../schemas/index';
+import { validateQuery } from '../middleware/validate';
+import { rateLimiter } from '../middleware/rateLimit';
 
 const router = Router();
 

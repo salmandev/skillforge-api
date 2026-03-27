@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
-import { supabase } from '../config/supabase.js';
-import { generateUniqueSlug } from '../lib/slugify.js';
-import { calculatePagination, parsePaginationParams } from '../lib/pagination.js';
-import { CreateWorkflowInput } from '../types/index.js';
-import { AuthRequest } from '../middleware/auth.js';
+import { supabase } from '../config/supabase';
+import { generateUniqueSlug } from '../lib/slugify';
+import { calculatePagination, parsePaginationParams } from '../lib/pagination';
+import { CreateWorkflowInput } from '../types/index';
+import { AuthRequest } from '../middleware/auth';
 
 export const getWorkflows = async (req: Request, res: Response): Promise<void> => {
   try {

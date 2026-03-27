@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import * as skillsController from '../controllers/skillsController.js';
-import { validate } from '../middleware/validate.js';
-import { createSkillSchema, updateSkillSchema, skillsQuerySchema, checkCompatibilitySchema } from '../schemas/index.js';
-import { validateQuery } from '../middleware/validate.js';
-import { rateLimiter, strictRateLimiter } from '../middleware/rateLimit.js';
+import * as skillsController from '../controllers/skillsController';
+import { validate } from '../middleware/validate';
+import { createSkillSchema, updateSkillSchema, skillsQuerySchema, checkCompatibilitySchema } from '../schemas/index';
+import { validateQuery } from '../middleware/validate';
+import { rateLimiter, strictRateLimiter } from '../middleware/rateLimit';
 
 const router = Router();
 

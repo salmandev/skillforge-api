@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 import dotenv from 'dotenv';
-import { scanSkillContent } from './lib/securityScanner.js';
-import { slugify } from './lib/slugify.js';
+import { scanSkillContent } from './lib/securityScanner';
+import { slugify } from './lib/slugify';
 
 dotenv.config();
 

@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
-import { supabase } from '../config/supabase.js';
-import { scanSkillContent } from '../lib/securityScanner.js';
-import { generateUniqueSlug } from '../lib/slugify.js';
-import { calculatePagination, parsePaginationParams } from '../lib/pagination.js';
-import { checkPlatformCompatibility } from '../lib/platformChecker.js';
-import { CreateSkillInput, CompatibilityCheckResponse, PlatformCompatibilityCheck } from '../types/index.js';
-import { AuthRequest } from '../middleware/auth.js';
+import { supabase } from '../config/supabase';
+import { scanSkillContent } from '../lib/securityScanner';
+import { generateUniqueSlug } from '../lib/slugify';
+import { calculatePagination, parsePaginationParams } from '../lib/pagination';
+import { checkPlatformCompatibility } from '../lib/platformChecker';
+import { CreateSkillInput, CompatibilityCheckResponse, PlatformCompatibilityCheck } from '../types/index';
+import { AuthRequest } from '../middleware/auth';
 
 export const getSkills = async (req: Request, res: Response): Promise<void> => {
   try {

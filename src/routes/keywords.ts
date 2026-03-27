@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import * as keywordsController from '../controllers/keywordsController.js';
-import { validate } from '../middleware/validate.js';
-import { createPromptKeywordSchema } from '../schemas/index.js';
+import * as keywordsController from '../controllers/keywordsController';
+import { validate } from '../middleware/validate';
+import { createPromptKeywordSchema } from '../schemas/index';
 
 const router = Router();
 

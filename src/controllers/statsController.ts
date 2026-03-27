@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { supabase } from '../config/supabase.js';
+import { supabase } from '../config/supabase';
 
 export const getStats = async (req: Request, res: Response): Promise<void> => {
   try {
