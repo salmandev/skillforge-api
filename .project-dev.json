@@ -1,0 +1,10 @@
+{
+  "name": "agency-skills-registry",
+  "host": "agency-skills-registry.localtest.me",
+  "port": 9025,
+  "url": "http://agency-skills-registry.localtest.me:9025",
+  "projectType": "node",
+  "os": "win32",
+  "assignedAt": "2026-03-27T18:35:28.137Z",
+  "basePath": "D:\\Dev\\Github\\agency-skills-registry"
+}
